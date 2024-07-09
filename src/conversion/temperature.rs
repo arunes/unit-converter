@@ -18,3 +18,18 @@ pub fn convert(degree: f32, from: &String, to: &str) -> f32 {
     let base_degree = to_base(degree, from);
     from_base(base_degree, to)
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_celcius_base_is_celcius() {
+        assert_eq!(to_base(31.0, "C"), 31.0);
+    }
+
+    #[test]
+    fn test_fahrenheit_base_is_celcius() {
+        assert_eq!(to_base(95.0, "F"), 35.0);
+    }
+}
