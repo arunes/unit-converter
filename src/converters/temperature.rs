@@ -29,7 +29,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_convert_celcius_to_fahrenheit() {
+    fn convert_celcius_to_fahrenheit() {
         assert_eq!(convert(32.0, "C", "F"), 89.6);
         assert_eq!(convert(25.2, "C", "F"), 77.4);
         assert_eq!(convert(16.4, "C", "F"), 61.5);
@@ -37,7 +37,7 @@ mod tests {
     }
 
     #[test]
-    fn test_convert_fahrenheit_to_celcius() {
+    fn convert_fahrenheit_to_celcius() {
         assert_eq!(convert(89.6, "F", "C"), 32.0);
         assert_eq!(convert(77.4, "F", "C"), 25.2);
         assert_eq!(convert(61.5, "F", "C"), 16.4);
